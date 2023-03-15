@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * #menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text">
+    <button>Generate-color</button>
+
+    <script>
+
+
+        //button keonclick par color chench ho jay
+
+        let btn = document.querySelector("button")
+        let input = document.querySelector("input")
+        let allowedvalues = "abcde0123456789";
+2
+        btn.onclick = () => {
+            let randomColor = "#";
+            for (let i = 0; i < 6; i++)
+                randomColor +=
+                    allowedvalues[Math.floor(Math.random() * allowedvalues.length)];
+            input.value = randomColor;
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+
+</body>
+
+</html>
